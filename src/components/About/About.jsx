@@ -22,6 +22,7 @@ const About = () => {
   ];
 
   return (
+    <>
 <div className="container mt-5">
 
     <div className="row">
@@ -59,8 +60,13 @@ const About = () => {
                     </div>
                 </div>
             </div>
+          </div>
+        </div>
+        </div>
+        
 <hr />   
 
+      <div className="container">
       <div className="aboutUs text-center">
         <h2 className='aboutUsh2'><span style={{color: 'rgba(252,176,66,255)'}}>About</span> Us</h2>
         <p>
@@ -93,9 +99,13 @@ const About = () => {
        </div>
     </div>
 </section>
+      </div>
+      
 
-<hr />
-     <div className='text-center'>
+    <div className='container-fluid'><img  src='/Images/school-divider.png' alt="" id='imagelogo'/></div>
+    
+      <div className="container">
+      <div className='text-center'>
         <h2 className='meetTeamh2 my-4'>Meet Our <span style={{color: 'rgba(252,176,66,255)'}}>Team</span></h2>
      </div>
      <div className="row">
@@ -114,22 +124,28 @@ const About = () => {
       </div>
       ))}
      </div>
+      </div>
+     
+<hr />
+<div className="container">
+<div className="text-center">
+        <h2 className='touchh2 my-5'>Get in <span style={{color: 'rgba(252,176,66,255)'}}>Touch</span></h2>
+        <p>
+            If you're ready to open your heart and home to a furry friend, we encourage you to visit our adoption and information center. Our dedicated team will guide you through the adoption process, answer any questions you may have, and ensure a smooth transition for both you and your new companion. Remember, when you adopt a pet, you're not just adding a furry member to your family; you're also saving a life and creating a lifelong bond. So, take the leap of love and visit us today – your perfect companion is waiting to meet you!
+        </p>
+        <p>
+            Visit our adoption and information center if you're ready to open your heart and home to a furry friend. Our dedicated team will guide you through the adoption process and ensure a smooth transition for both you and your new companion, saving a life and creating a lifelong bond.
+        </p>
+        <p>
+          Contact us today to learn more about our available dogs and how you can make a difference
+          in a dog's life through adoption.
+        </p>
+      </div>
+</div>
       
-      
-      <h2>Get in Touch</h2>
-      <p>
-          If you're ready to open your heart and home to a furry friend, we encourage you to visit our adoption and information center. Our dedicated team will guide you through the adoption process, answer any questions you may have, and ensure a smooth transition for both you and your new companion. Remember, when you adopt a pet, you're not just adding a furry member to your family; you're also saving a life and creating a lifelong bond. So, take the leap of love and visit us today – your perfect companion is waiting to meet you!
-      </p>
-      <p>
-          Visit our adoption and information center if you're ready to open your heart and home to a furry friend. Our dedicated team will guide you through the adoption process and ensure a smooth transition for both you and your new companion, saving a life and creating a lifelong bond.
-      </p>
-      <p>
-        Contact us today to learn more about our available dogs and how you can make a difference
-        in a dog's life through adoption.
-      </p>
-    </div>
-        </div>
-    </div>
+</>
+  
+
     
   );
 };

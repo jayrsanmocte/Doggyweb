@@ -6,9 +6,11 @@ import LoginForm from './components/Login&Register/LoginForm';
 import RegisterForm from './components/Login&Register/RegisterForm';
 import Adopt from './components/Adopt/Adopt';
   import ApplicantsInfo from './components/Adopt/ApplicantsInfo';
-import SearchDog from './components/dogdata/SearchDog';
+import SearchDog from './components/Dogdata/SearchDog';
 import Dogdata from './components/dogdata/Dogdata';
 import About from './components/About/About';
+// import Footer from './components/Footer/Footer';
+
   const App = () => {
     const [selectedDogName, setSelectedDogName] = useState('');
 
@@ -24,6 +26,7 @@ import About from './components/About/About';
             <Route path="/appinfo/:id" element={<ApplicantsInfo />} />
             <Route path="/searchDog" element={<SearchDog />} />
             <Route path="/dogdata" element={<Dogdata />} />
+            {/* <Route path="/contacts" element={<Footer />} /> */}
             <Route path="/login" element={<LoginForm />} />
             <Route path="/register" element={<RegisterForm />} />
           </Route>

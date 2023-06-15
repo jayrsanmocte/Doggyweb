@@ -2,8 +2,11 @@ import React from 'react';
 
 const Footer = () => {
     return (
-
-    <div> <img src='/Images/footer.png' alt="Description of the image" id='imagelogo'/>
+<>
+        <div className='sige'>
+        <div> <img src='/Images/footer.png' alt="Description of the image" id='imagelogo'/>
+        </div>
+    
     <div className="bg-custom text-center text-lg-start text-black">
         <div className="container p-4">
                 <div className="row my-4">
@@ -101,6 +104,8 @@ const Footer = () => {
             </div>
         </div>
         </div>
+
+        </>
     );
 };
 

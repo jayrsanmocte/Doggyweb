@@ -70,7 +70,7 @@ function Navbar() {
                 onMouseEnter={handleNavItemHover}
                 onMouseLeave={handleNavItemLeave}
               >
-                <i className="fas fa-paw me-3 hvr-icon-buzz-out"></i>Adopt A Dog
+                <i className="fas fa-paw me-3 hvr-icon-buzz-out"></i>Adopt a Dog
               </Link>
             </li>
 
@@ -83,6 +83,17 @@ function Navbar() {
               >
                 <i className="fas fa-paw me-3 hvr-icon-buzz-out"></i>Search Dog
               </Link>
+            </li>
+
+            <li className="nav-item">
+              <a
+                className="nav-link me-5"
+                href=".components/Footer/Footer.jsx"
+                onMouseEnter={handleNavItemHover}
+                onMouseLeave={handleNavItemLeave}
+              >
+                <i className="fas fa-paw me-3 hvr-icon-buzz-out"></i>Contact
+              </a>
             </li>
           </ul>
           <form className="d-flex me-5 align-items-center justify-content-between" role="search">

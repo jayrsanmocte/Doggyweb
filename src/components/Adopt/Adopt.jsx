@@ -156,15 +156,16 @@ import { Link } from 'react-router-dom';
                                 return (
                                   <div className="col-3" key={index2}>
                                   
-                                    <div className="card">
+                                    <div className="card cardAdopt">
                                       <div className="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
                                         <img src={dognames[name][2]} className="img-fluid hvr-grow" alt="Dog" />
                                         <a href="#!">
                                           <div className="" style={{ backgroundColor: "rgba(251, 251, 251, 0.15)" }}></div>
                                         </a>
+                                        <h5 className="card-title">{dognames[name][0]}</h5>
                                       </div>
                                       <div className="card-body">
-                                        <h5 className="card-title">{dognames[name][0]}</h5>
+                                        
                                         <p className="card-text">{dognames[name][1]}</p>
                                         <div className='AdoptLoop'>
                                         

@@ -115,6 +115,10 @@
   height: 10%;
 }
 
+/* .sige {
+  margin-top: 5%;
+} */
+
 /* webkit */
 /* Hide the scrollbar */
 ::-webkit-scrollbar {
@@ -212,6 +216,31 @@
   padding-bottom: 20%;
 }
 
+.img-fluid {
+  border-radius: 50%;
+  width: 50%;
+  margin-left: 25%;
+  margin-top: 10%;
+}
+
+.bg-image {
+ 
+  position: relative;
+  height: 265px;
+  background: #F2F2F2;
+  background: -moz-linear-gradient(-45deg, rgba(252,176,66,255), #FDEA7D);
+  background: -webkit-linear-gradient(-45deg, rgba(252,176,66,255), #FDEA7D);
+  background: linear-gradient(135deg, rgba(252,176,66,255), #FDEA7D);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#F2F2F2', endColorstr='#FDEA7D', GradientType=1);
+  border-radius: 25px 25px 0 0;
+
+}
+
+.card-title {
+  text-align: center;
+  margin-top: 10%;
+}
+
 .AdoptLoopBtn {
   position: absolute;
   bottom: 0;
@@ -259,14 +288,28 @@
   text-align: center;
 }
 
+.touchh2 {
+  font-size: 3rem;
+}
+
 /* ____________________________________________________________________DogData */
+
+#root {
+  margin: 0%;
+  padding: 0%;
+}
 
 .doggy h1 {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+
 .dogo {
   text-align: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin-bottom: 10%;
+  margin-top: 1%;
+  font-size: 3rem;
 }
 
 .dogoimg {
@@ -276,11 +319,37 @@
   object-fit: cover;
 }
 
-.dogowarper {
+#dogowarper {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 0;
+  /* height: 50%; */
+  margin-top: 10%;
+}
+
+.pBox {
+  display: flex;
+  justify-content: center;
+  margin-top: 5%;
+}
+
+.ppBox {
+  text-align: center;
+  width: 80%;
+}
+
+.inamo {
+  width: 100%;
+}
+
+.inamoBox {
+  width: 80%;
+}
+
+.inamoTalaga {
+  display: flex;
+  justify-content: center;
 }
 
 .pdog {
@@ -297,22 +366,28 @@
 }
 
 .background-container {
-background-color: #ffffff;
+ background-color: #ffffff;
   background-repeat: no-repeat;
   background-size: cover;
-  width: 100vw;
-  height: 100vh;
-  /* Add any additional styles as needed */
+  /* width: 100vw;
+  height: 100vh; */
 }
-
 
 
 .carousel-image {
-  width: 100%; /* Adjust the width as desired */
-  height: 500px; /* Let the height adjust proportionally */
+  width: 100%; 
+  height: 100%;
+  border-radius: 10%;
 }
 
+.carouselBox {
+ width: 100%;
+ height: 600px;
+}
 
+/* .amen {
+  height: 100%;
+} */
 
 .thumbnail-gallery {
   display: flex;
@@ -329,7 +404,15 @@ background-color: #ffffff;
 }
 
 .thumbnail.active {
-  border: 2px solid red; /* Add a border to indicate the active thumbnail */
+  border: 2px solid rgba(252,176,66,255); /* Add a border to indicate the active thumbnail */
+}
+
+.spanName1 {
+  color: #4f4f4f;
+}
+
+.spanName2 {
+  color: rgba(252,176,66,255);
 }
 
 
