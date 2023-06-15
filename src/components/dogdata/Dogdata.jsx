@@ -61,7 +61,8 @@ function Dogdata() {
       .catch((error) => console.log(error));
   }
 
-  return (
+  return ( 
+    
     // <div style={{ overflow: 'hidden' }}>
       <div className="background-container">
         {isLoading ? (
