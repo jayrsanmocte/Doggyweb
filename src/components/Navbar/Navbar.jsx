@@ -54,14 +54,14 @@ function Navbar() {
               </Link>
             </li>
             <li className="nav-item">
-              <a
+              <Link
                 className="nav-link me-5"
-                href="#"
+                to="/about"
                 onMouseEnter={handleNavItemHover}
                 onMouseLeave={handleNavItemLeave}
               >
                 <i className="fas fa-paw me-3 hvr-icon-buzz-out"></i>About
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
               <Link

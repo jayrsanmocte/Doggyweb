@@ -1,41 +1,39 @@
-import React, { useEffect } from 'react';
+
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-
-
 
 function SearchDog() {
   const navigate = useNavigate();
+  const [searchQuery, setSearchQuery] = useState('');
 
   const handleButtonClick = (breedname, breedid) => {
     navigate(`/dogdata?breedname=${breedname}&breedid=${breedid}`);
   };
 
-  var elem
-  var iso
-useEffect (()=>{
-    elem = document.querySelector('.grid');
-    iso = new Isotope( elem, {
-      // options
-      itemSelector: '.grid-item',
-      layoutMode: 'fitRows'
-    });
+  useEffect(() => {
+    const gridItems = document.querySelectorAll('.grid-item');
 
-    // element argument can be a selector string
-    //   for an individual element
-    setTimeout(() => {
-      iso.arrange({ filter: '*' });
-    }, 500);
+    const filterBreeds = (query) => {
+      const searchTerm = query.toLowerCase();
 
-},[])
+      gridItems.forEach((item) => {
+        const breedName = item.innerText.toLowerCase();
+        if (breedName.includes(searchTerm)) {
+          item.style.display = 'block';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    };
 
-function tigre() {
-  let tiger = document.getElementById('tiger').value;
-    if (tiger == undefined || tiger == '' ){
-      iso.arrange({ filter: '*' });
-    }
-    iso.arrange({ filter: '.'+tiger });
-}
-  const dogbreeds = [
+    filterBreeds(searchQuery);
+  }, [searchQuery]);
+
+  const handleSearchChange = (e) => {
+    setSearchQuery(e.target.value);
+  };
+
+  const dogBreeds = [
     ['affenpinscher','036feed0-da8a-42c9-ab9a-57449b530b13'],
     ['airedale','1460844f-841c-4de8-b788-271aa4d63224'],
     ['appenzeller','b56e4273-9ec0-4274-831d-b238225f8fb6'],
@@ -98,44 +96,42 @@ function tigre() {
     ['waterdog', '4750a978-d281-4cdb-a0c8-8f24c06365b5'],
     ['weimaraner', '851399dd-ebd6-49d6-b4c1-ec26ee583799'],
     ['whippet', '305408b2-c3a8-4ec8-99f0-33b865dfaeb6'],
-  ]
-
+  ];
 
   return (
-<>
     <div className="container">
-
-    <div className='container d-flex mt-5 mb-5'>
-          <input
-          className="form-control me-2" id="tiger"
-          type="login"
-          placeholder=""
+      <div className="container d-flex mt-5 mb-5">
+        <input
+          className="form-control me-2"
+          type="search"
+          placeholder="Search"
           aria-label="Search"
-          onKeyUp={tigre}
-          
-          />
-        
-          <button className="btn btn-warning" onClick={tigre} type="submit">
-            Search
-          </button> 
-      </div>
-    <div className='grid col-12' >
-      <div className="row text-center">
-      { 
-      dogbreeds.map((dogbreed)=>(
-        <div key={dogbreed[0]}   className=  {`grid-item btn-custom text-center ${dogbreed[0]}`}  onClick={() => handleButtonClick(dogbreed[0], dogbreed[1])}>
-              <div className="paws1 fas fa-paw hvr-icon-buzz-out" />
-             {dogbreed[0]}
-        </div>  
-      ))
-      }
-      </div>
-     
-    </div>
+          value={searchQuery}
+          onChange={handleSearchChange}
+        />
 
+        <button className="btn btn-warning" type="submit">
+          Search
+        </button>
+      </div>
+
+      <div className="grid col-12">
+        <div className="row text-center">
+          {dogBreeds.map((dogBreed) => (
+            <div
+              key={dogBreed[0]}
+              className={`grid-item btn-custom text-center ${dogBreed[0]}`}
+              onClick={() => handleButtonClick(dogBreed[0], dogBreed[1])}
+            >
+              <div className="paws1 fas fa-paw hvr-icon-buzz-out" />
+              {dogBreed[0]}
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
-</>
   );
 }
 
 export default SearchDog;
+
