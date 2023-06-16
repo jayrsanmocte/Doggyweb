@@ -16,7 +16,7 @@ import SearchDog from './components/dogdata/SearchDog';
 
     return (
       <>
-        <Routes>
+        <Routes basename="/Doggyweb/">
           <Route element={<Layout />}>
             <Route path="/" element={<Home />} />
             <Route path="/home" element={<Home />} />
