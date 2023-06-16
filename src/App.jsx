@@ -5,11 +5,11 @@ import Home from './components/Home/Home';
 import LoginForm from './components/Login&Register/LoginForm';
 import RegisterForm from './components/Login&Register/RegisterForm';
 import Adopt from './components/Adopt/Adopt';
-  import ApplicantsInfo from './components/Adopt/ApplicantsInfo';
-import SearchDog from './components/Dogdata/SearchDog';
+import ApplicantsInfo from './components/Adopt/ApplicantsInfo';
 import Dogdata from './components/dogdata/Dogdata';
 import About from './components/About/About';
-// import Footer from './components/Footer/Footer';
+import SearchDog from './components/dogdata/SearchDog';
+
 
   const App = () => {
     const [selectedDogName, setSelectedDogName] = useState('');

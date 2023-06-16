@@ -81,14 +81,14 @@ function Navbar() {
                 onMouseEnter={handleNavItemHover}
                 onMouseLeave={handleNavItemLeave}
               >
-                <i className="fas fa-paw me-3 hvr-icon-buzz-out"></i>Search Dog
+                <i className="fas fa-paw me-3 hvr-icon-buzz-out"></i>Search a Dog
               </Link>
             </li>
 
             <li className="nav-item">
               <a
                 className="nav-link me-5"
-                href=".components/Footer/Footer.jsx"
+                href="#footer"
                 onMouseEnter={handleNavItemHover}
                 onMouseLeave={handleNavItemLeave}
               >

@@ -3,7 +3,7 @@ import React from 'react';
 const Footer = () => {
     return (
 <>
-        <div className='sige'>
+        <div className='sige' id="footer">
         <div> <img src='/Images/footer.png' alt="Description of the image" id='imagelogo'/>
         </div>
     
